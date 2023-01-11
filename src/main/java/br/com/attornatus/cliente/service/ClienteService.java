@@ -22,8 +22,7 @@ public class ClienteService {
         return clienteRepository.findAllById(id);
     }
     public void removerPorId(Long id){
-        clienteRepository.deleteAllById(id);
-
+        clienteRepository.deleteById(id);
     }
 
 }

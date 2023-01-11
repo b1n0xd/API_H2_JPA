@@ -37,11 +37,11 @@ public class ClienteController {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void removerCliente(@PathVariable("id") Long id){
-    clienteService.buscarPorId(id)
-            .map(cliente -> {
-                clienteService.removerPorId(cliente.getId());
-                return Void.TYPE;
-            }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente nao encontrado.."));
+        clienteService.buscarPorId(id)
+                .map(cliente -> {
+                    clienteService.removerPorId(cliente.getId());
+                    return Void.TYPE;
+                }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente nao encontrado."));
     }
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
