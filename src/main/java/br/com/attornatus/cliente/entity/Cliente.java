@@ -21,13 +21,14 @@ public class Cliente implements Serializable {
     private String nome;
     @Column(name = "dataNascimento", nullable = false)
     private  String dataNascimento;
-    @Column(name = "enderecoCompleto", nullable = false)
-    private String endereco;
-    public class Endereco {
+    @Column(name = "logradouro", nullable = false)
         private String logradouro;
-        private String rua;
+    @Column(name = "endereco", nullable = false)
+        private String endereco;
+    @Column(name = "cep", nullable = false)
         private String cep;
+    @Column(name = "numero", nullable = false)
         private String numero;
+    @Column(name = "cidade", nullable = false)
         private String cidade;
-}
 }
